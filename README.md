@@ -20,7 +20,7 @@ A critical component for fast food restaurant businesses is developing products 
 - [Dataset](#Dataset)
 - [Exploration](#Exploration)
 - [Analysis](#Analysis)
-- [Modeling(#Modeling)
+- [Modeling](#Modeling)
 - [Summary](#Summary)
 - [Discussion](#Discussion)
 
@@ -33,14 +33,9 @@ A critical component for fast food restaurant businesses is developing products 
 
 # Objective
 
-- number of topics
-- key words
-- dominant topic of each review
-- topic modeling
-- sentiment analysis
-- correlation positiv eand negative
-- recommendations
-- geography patterns (by state/province and city)
+- Find patterns in reviews such as food, time, people, emotion, and geography
+- Utilize NLP and machine learning algorithms to predict ratings given a user review
+- Provide insightful customer feedback for business stakeholders to utilize in new product development and research
 
 # Dataset
 
@@ -145,15 +140,55 @@ Number of Total Reviews:  20414
 
 ## "A picture is worth a thousand words."
 
-### Text Length of Review By Rating (1-5 Stars) for ALL Yelp Reviews
+### Text Length of Review By Rating (1-5 Stars)
 
-![text_length](img/text_length_by_stars.png)
+![word](img/word_count_boxplot.png)
 
-### Text Length of Review By Rating (1-5 Stars) for McDonald's Reviews
+```
+count    20414.000000
+mean        87.198344
+std         78.778958
+min          1.000000
+25%         37.000000
+50%         63.000000
+75%        109.000000
+max        997.000000
+Name: word_count, dtype: float64
+```
+
+### Character Length of Reviews By Rating (1-5 Stars)
+
+![char](img/char_length.png)
+
+```
+count    20414.000000
+mean       464.655971
+std        416.272056
+min          1.000000
+25%        199.000000
+50%        338.000000
+75%        577.000000
+max       4989.000000
+Name: text_length, dtype: float64
+```
 
 ## "The customer is always right."
 
 <img src="img/mcdonalds_piechart.png" alt="drawing" style="width:400px;"/>
+
+```
+count    20414.000000
+mean         1.889928
+std          1.358338
+min          1.000000
+25%          1.000000
+50%          1.000000
+75%          3.000000
+max          5.000000
+Name: stars_y, dtype: float64
+```
+
+![heatmap](img/heatmap.png)
 
 # Modeling
 
