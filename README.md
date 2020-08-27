@@ -1,4 +1,4 @@
-# A Happy Meal: Predicting McDonald's User Ratings on Yelp Utilizing NLP and Machine Learning
+# A Happy Meal: Predicting McDonald's Yelp Ratings Utilizing NLP and Machine Learning
 
 ![yelp_title](img/yelp-logo.png)
 
@@ -8,17 +8,39 @@ McDonald's Corporation is an American fast food company, founded in 1940 as a re
 
 Yelp is an American public company headquartered in San Francisco, California. The company develops, hosts, and markets the Yelp.com website and the Yelp mobile app, which publish crowd-sourced reviews about businesses. It also operates an online reservation service called Yelp Reservations. [(source: Wikipedia)](https://en.wikipedia.org/wiki/Yelp)]
 
-A critical
+A critical component for fast food restaurant businesses is developing products like new food menu items that take into account customer feedback. This study seeks to explore the sentiment and satisfaction of McDonald's restaurants through written language on Yelp user reviews.
+
+![mcdonalds-title](img/mcdonalds-front.png)
 
 ## Contents
 
 - [Dataset](#Dataset)
 - [Questions](#Questions)
+- [Objectives](#Objectives)
+- [Dataset](#Dataset)
 - [Exploration](#Exploration)
 - [Analysis](#Analysis)
-- [Geography](#Geography)
+- [Modeling(#Modeling)
 - [Summary](#Summary)
 - [Discussion](#Discussion)
+
+# Questions
+
+- What food words or menu items are most likely discussed in reviews?
+- Which states/provinces or cities have the highest number of reviews?
+- What meal time (e.g, breakfast, lunch, dinner, brunch) is mentioned the most in reviews?
+- What menu items (e.g., French fries, McNuggets, Big Mac, Coke, wuarterpounder) are mentioned the most in reviews?
+
+# Objective
+
+- number of topics
+- key words
+- dominant topic of each review
+- topic modeling
+- sentiment analysis
+- correlation positiv eand negative
+- recommendations
+- geography patterns (by state/province and city)
 
 # Dataset
 
@@ -33,9 +55,9 @@ The original [Yelp dataset](https://www.yelp.com/dataset/) contains:
 - Over 1.4 million business attributes like hours, parking, availability, and ambience
 - Aggregated check-ins over time for each of the 209,393 businesses
 
-![million](img/million_rows.gif)
-
 See [Dataset Documentation.](https://www.yelp.com/dataset/documentation/main)
+
+![million](img/million_rows.gif)
 
 ## Filtering for "McDonald's" restaurants
 
@@ -56,25 +78,19 @@ Total Number of Unique Stores:  855
 Number of Total Reviews:  20414
 ```
 
-# Questions
-
-- What food words or menu items are most likely discussed in reviews?
-- Which states/provinces or cities have the highest number of reviews?
-- What meal time (e.g, breakfast, lunch, dinner, brunch) is mentioned the most in reviews?
-- What menu items (e.g., French fries, McNuggets, Big Mac, Coke, Quarterpounder) are mentioned the most in reviews?
-
-# Objective
-
-- number of topics
-- key words
-- dominant topic of each review
-- topic modeling
-- sentiment analysis
-- correlation positiv eand negative
-- recommendations
-- geography patterns (by state/province and city)
+![ronald_here](img/ronald.jpg)
 
 # Exploration
+
+## Descriptive Statistics
+
+### Columns
+
+![columns](img/df_final_unique.png)
+
+### Ratings by Vote Type
+
+![rating_vote](img/rating_votes.png)
 
 # NLP
 
@@ -82,19 +98,19 @@ Number of Total Reviews:  20414
 
 ### Raw Text
 
-```
+```text
 "I think most of us have certain expectations of any restaurant. My experience with this location has poisoned me against all McDonald's. It started when my wife said she wanted a fruit smoothy. We ordered our smoothies which came to $8 for 2 larges. Cool fun thing to do right...\n\nThe next day I saw my card had been double charged. So I went back and asked the manager if she could make it right. I said I didn't even need a cash refund it would have been fine to just take it off the order I was about to make. She said she could not do that and that she had no way to look it up. She gave me a phone number to their office in Mentor. I called the person in Mentor who looked up my order she said I needed to wait 10 days or so because the card had been authorized but not charged twice. \n\n10 days later the charge came off but I expect when I go out for food my card will not be double authorized. Be that as it may $8 worth of food would have fixed this. I will NEVER go back to McDonald's because of how this was handled."
 ```
 
 ### Round 1
 
-```
-'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to  for  larges cool fun thing to do right\n\nthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait  days or so because the card had been authorized but not charged twice <mark>\n\n<mark> days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may  worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
+```text
+'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to  for  larges cool fun thing to do right\n\nthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait  days or so because the card had been authorized but not charged twice \n\n days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may  worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
 ```
 
 ### Round 2
 
-```
+```text
 'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to  for  larges cool fun thing to do rightthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait  days or so because the card had been authorized but not charged twice  days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may  worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
 ```
 
@@ -102,36 +118,44 @@ Number of Total Reviews:  20414
 
 ### By Food
 
+![food](img/food_wc.png)
+
 ### By Time
+
+![time](img/time_wordcloud.png)
 
 ### By Emotion
 
+![emotion](img/emotion_wordcloud.png)
+
 ### By People
+
+![people](img/wc_people.png)
+
+### By Geography
+
+- 8 out of the top 15 cities with the highest number of reviews are in Arizona.
+- The city with the highest number of reviews is Las Vegas.
+- The state/province with the highest number of reviews is Nevada.
+
+  ![by_city](img/by_city.png)
+  ![by_state](img/by_state.png)
 
 # Analysis
 
 ## "A picture is worth a thousand words."
 
-### Text Length of Review By Rating (1-5 Stars)
+### Text Length of Review By Rating (1-5 Stars) for ALL Yelp Reviews
 
 ![text_length](img/text_length_by_stars.png)
 
+### Text Length of Review By Rating (1-5 Stars) for McDonald's Reviews
+
 ## "The customer is always right."
 
-# Geography
+<img src="img/mcdonalds_piechart.png" alt="drawing" style="width:400px;"/>
 
-## Arizona
-
-- 8 out of the top 15 cities with the highest number of reviews are in Arizona.
-
-![by_city](img/by_city.png)
-
-## Nevada
-
-- The state/prvoince with the highest number of reviews is Nevada.
-- The city with the highest number of reviews is Las Vegas.
-
-# Machine Learning Models
+# Modeling
 
 ## Classification
 
@@ -212,6 +236,22 @@ In predicting ratings using NLP from text data of reviews, the Multinomial Naive
 
 ### Support Vector Machines (SVM)
 
+- Took almost 16 minutes to process on local machine.
+
+```
+Confusion Matrix for Support Vector Machines:
+[[2520    6    9    1   13]
+ [ 411    6   29    6    5]
+ [ 171   12  105   56   37]
+ [  65   10   66   84   95]
+ [  84    0   23   42  227]]
+Score: 72.05
+```
+
+In predicting ratings using NLP from text data of reviews, the Support Vector Machines (SVM) algorithm achieved an accuracy of **72.05%**.
+
+![ronald](img/ronald_dance.gif)
+
 # Summary
 
 - Arizona and Nevada have a high number of reviews for McDonald's in their state.
@@ -219,6 +259,9 @@ In predicting ratings using NLP from text data of reviews, the Multinomial Naive
 - Breakfast is the most commonly talked about meal of the day in reviews.
 - Although the official menu item is called chicken "McNuggets", the majority of users refer to the menu item as just simply "nuggets".
 - In addition, customers prefer to use "fries" instead of "French fries" much more often in the written reviews.
+- For events, 'customers often mention a "game", "event", or "party".
+- For people and relationships, customers VERY often mention a "friend". Other people also commonly mentioned include "husband", "wife", and "mate".
+- With regards to time, customers often mention the words "time", "late", and "breakfast" .
 
 ![nuggets](img/nuggets.gif)
 
@@ -228,4 +271,4 @@ In predicting ratings using NLP from text data of reviews, the Multinomial Naive
 - What metrics can be analyzed to indicate performance through the next quarter or fiscal year?
 - How can data scientists utilize machine learning to detect fake reviews that artificially affect the ratings of businsesses?
 
-![ronald](img/ronald_dance.gif)
+<img src="img/2020_tshirt.jpg" alt="drawing" style="width:500px;"/>
