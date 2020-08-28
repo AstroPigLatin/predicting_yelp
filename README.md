@@ -287,16 +287,51 @@ In predicting ratings using NLP from text data of reviews, the Support Vector Ma
 
 ![ronald](img/ronald_dance.gif)
 
+### Evaluating Times
+
+Multinomial Naive Bayes
+Decision Tree
+RandomForestClassifier
+Support Vector Machines (SVM): 15m 45.19s
+
+RandomForestRegressor: 24m 44.34s
+RandomForestRegressor: 1h 38m 39s
+Gradient Boosting Regressor: 4m 40.42s
+XGBoost: 1h 5m 5s
+
 # Summary
 
+## Rating
+
+- Often negative reviews (1 or 2 star) have more outliers that tend to be on the longer side.
+  - People often have a lot to say about things they do NOT like.
+  - Criticism is often a long form of poetry.
+
+## Location
+
 - Arizona and Nevada have a high number of reviews for McDonald's in their state.
+
+## Food
+
 - Burgers and fries are commonly talked about in reviews.
 - Breakfast is the most commonly talked about meal of the day in reviews.
 - Although the official menu item is called chicken "McNuggets", the majority of users refer to the menu item as just simply "nuggets".
 - In addition, customers prefer to use "fries" instead of "French fries" much more often in the written reviews.
+
+## Time
+
 - For events, 'customers often mention a "game", "event", or "party".
-- For people and relationships, customers VERY often mention a "friend". Other people also commonly mentioned include "husband", "wife", and "mate".
 - With regards to time, customers often mention the words "time", "late", and "breakfast" .
+
+## People
+
+- For people and relationships, customers VERY often mention a "friend". Other people also commonly mentioned include "husband", "wife", and "mate".
+
+## Modeling
+
+- In the predictive modeling of ratings (1 to 5 stars), the best multinomial classification model out of the 4 chosen algorithms was: **Support Vector Machines (SVM)**
+- Using NLP to predict ratings from written reviews is a difficult task.
+  - Some difficulties include vocabulary, slang, vernacular, regional dialect, and grammar variability in detecting patterns for sentiment analysis.
 
 ![nuggets](img/nuggets.gif)
 
@@ -304,6 +339,6 @@ In predicting ratings using NLP from text data of reviews, the Support Vector Ma
 
 - How can company stakeholders make strategic decisions in product development given these insights from data?
 - What metrics can be analyzed to indicate performance through the next quarter or fiscal year?
-- How can data scientists utilize machine learning to detect fake reviews that artificially affect the ratings of businsesses?
+- How can data scientists utilize machine learning to detect fake reviews that artificially affect the ratings of businesses?
 
 <img src="img/2020_tshirt.jpg" alt="drawing" style="width:500px;"/>
