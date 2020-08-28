@@ -287,17 +287,29 @@ In predicting ratings using NLP from text data of reviews, the Support Vector Ma
 
 ![ronald](img/ronald_dance.gif)
 
-### Evaluating Times
+## Regress
 
-Multinomial Naive Bayes
-Decision Tree
-RandomForestClassifier
-Support Vector Machines (SVM): 15m 45.19s
+### Random Forest Regressor
 
-RandomForestRegressor: 24m 44.34s
-RandomForestRegressor: 1h 38m 39s
-Gradient Boosting Regressor: 4m 40.42s
-XGBoost: 1h 5m 5s
+Metrics for Random Forest Trained on Expanded Data
+Average absolute error: 0.64 degrees.
+RMSE = 0.9340418438455377
+MSE = 0.8724341660543717
+
+### Rand
+
+## Computational Speed
+
+| Model                         | Speed      |
+| ----------------------------- | ---------- |
+| Multinomial Naive Bayes       | 125ms      |
+| Decision Tree                 | 1m 10.61s  |
+| RandomForestClassifier        | 2m 7.45s   |
+| Gradient Boosting Regressor   | 4m 40.42s  |
+| Support Vector Machines (SVM) | 15m 45.19s |
+| RandomForestRegressor         | 24m 44.34s |
+| XGBoost                       | 1h 5m 5s   |
+| RandomForestRegressor         | 1h 38m 39s |
 
 # Summary
 
@@ -340,5 +352,7 @@ XGBoost: 1h 5m 5s
 - How can company stakeholders make strategic decisions in product development given these insights from data?
 - What metrics can be analyzed to indicate performance through the next quarter or fiscal year?
 - How can data scientists utilize machine learning to detect fake reviews that artificially affect the ratings of businesses?
+
+![happiness](img/happiness.jpg)
 
 <img src="img/2020_tshirt.jpg" alt="drawing" style="width:500px;"/>
