@@ -93,24 +93,24 @@ Number of Total Reviews:  20414
 
 ### Raw Text
 
-```text
+<p>
 "I think most of us have certain expectations of any restaurant. My experience with this location has poisoned me against all McDonald's. It started when my wife said she wanted a fruit smoothy. We ordered our smoothies which came to $8 for 2 larges. Cool fun thing to do right...\n\nThe next day I saw my card had been double charged. So I went back and asked the manager if she could make it right. I said I didn't even need a cash refund it would have been fine to just take it off the order I was about to make. She said she could not do that and that she had no way to look it up. She gave me a phone number to their office in Mentor. I called the person in Mentor who looked up my order she said I needed to wait 10 days or so because the card had been authorized but not charged twice. \n\n10 days later the charge came off but I expect when I go out for food my card will not be double authorized. Be that as it may $8 worth of food would have fixed this. I will NEVER go back to McDonald's because of how this was handled."
-```
 
 ### Round 1
 
 <p>
-```text
-'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to  for  larges cool fun thing to do right\n\nthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait  days or so because the card had been authorized but not charged twice \n\n days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may  worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
+
+'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to for larges cool fun thing to do right\n\nthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait days or so because the card had been authorized but not charged twice \n\n days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
+
 ```
-<p>
+
 
 ### Round 2
 
 <p>
-```text
+
 'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to  for  larges cool fun thing to do rightthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait  days or so because the card had been authorized but not charged twice  days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may  worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
-```
+
 
 ## Insights
 
@@ -148,15 +148,17 @@ Number of Total Reviews:  20414
 ![word](img/word_count_boxplot.png)
 
 ```
-count    20414.000000
-mean        87.198344
-std         78.778958
-min          1.000000
-25%         37.000000
-50%         63.000000
-75%        109.000000
-max        997.000000
+
+count 20414.000000
+mean 87.198344
+std 78.778958
+min 1.000000
+25% 37.000000
+50% 63.000000
+75% 109.000000
+max 997.000000
 Name: word_count, dtype: float64
+
 ```
 
 ### Character Length of Reviews By Rating (1-5 Stars)
@@ -164,15 +166,17 @@ Name: word_count, dtype: float64
 ![char](img/char_length.png)
 
 ```
-count    20414.000000
-mean       464.655971
-std        416.272056
-min          1.000000
-25%        199.000000
-50%        338.000000
-75%        577.000000
-max       4989.000000
+
+count 20414.000000
+mean 464.655971
+std 416.272056
+min 1.000000
+25% 199.000000
+50% 338.000000
+75% 577.000000
+max 4989.000000
 Name: text_length, dtype: float64
+
 ```
 
 ## "The customer is always right."
@@ -180,15 +184,17 @@ Name: text_length, dtype: float64
 <img src="img/mcdonalds_piechart.png" alt="drawing" style="width:400px;"/>
 
 ```
-count    20414.000000
-mean         1.889928
-std          1.358338
-min          1.000000
-25%          1.000000
-50%          1.000000
-75%          3.000000
-max          5.000000
+
+count 20414.000000
+mean 1.889928
+std 1.358338
+min 1.000000
+25% 1.000000
+50% 1.000000
+75% 3.000000
+max 5.000000
 Name: stars_y, dtype: float64
+
 ```
 
 ![heatmap](img/heatmap.png)
@@ -200,12 +206,13 @@ Name: stars_y, dtype: float64
 ### Random Forest
 
 ```
-[[2529    0    5    1   14]
- [ 435    2    8    2   10]
- [ 270    1   29   23   58]
- [ 162    1   21   34  102]
- [ 161    0    7   21  187]]
-              precision    recall  f1-score   support
+
+[[2529 0 5 1 14]
+[ 435 2 8 2 10]
+[ 270 1 29 23 58]
+[ 162 1 21 34 102]
+[ 161 0 7 21 187]]
+precision recall f1-score support
 
          1.0       0.71      0.99      0.83      2549
          2.0       0.50      0.00      0.01       457
@@ -214,10 +221,12 @@ Name: stars_y, dtype: float64
          5.0       0.50      0.50      0.50       376
 
     accuracy                           0.68      4083
-   macro avg       0.51      0.34      0.33      4083
-weighted avg       0.62      0.68      0.59      4083
+
+macro avg 0.51 0.34 0.33 4083
+weighted avg 0.62 0.68 0.59 4083
 
 0.6811168258633358
+
 ```
 
 In predicting ratings using NLP from text data of reviews, the Random Forest algorithm achieved an accuracy of **68.11%**.
@@ -225,14 +234,15 @@ In predicting ratings using NLP from text data of reviews, the Random Forest alg
 ### Multinomial Naive Bayes
 
 ```
+
 Confusion Matrix for Multinomial Naive Bayes:
-[[2542    1    5    0    1]
- [ 433    5   15    1    3]
- [ 250    7   68   32   24]
- [ 164    3   50   48   55]
- [ 187    0   11   22  156]]
+[[2542 1 5 0 1]
+[ 433 5 15 1 3]
+[ 250 7 68 32 24]
+[ 164 3 50 48 55]
+[ 187 0 11 22 156]]
 Score: 69.04
-Classification Report:               precision    recall  f1-score   support
+Classification Report: precision recall f1-score support
 
          1.0       0.71      1.00      0.83      2549
          2.0       0.31      0.01      0.02       457
@@ -241,8 +251,10 @@ Classification Report:               precision    recall  f1-score   support
          5.0       0.65      0.41      0.51       376
 
     accuracy                           0.69      4083
-   macro avg       0.52      0.35      0.37      4083
-weighted avg       0.62      0.69      0.61      4083
+
+macro avg 0.52 0.35 0.37 4083
+weighted avg 0.62 0.69 0.61 4083
+
 ```
 
 In predicting ratings using NLP from text data of reviews, the Multinomial Naive Bayes algorithm achieved an accuracy of **69.04%**
@@ -250,14 +262,15 @@ In predicting ratings using NLP from text data of reviews, the Multinomial Naive
 ### Decision Tree
 
 ```
+
 Confusion Matrix for Decision Tree:
-[[2019  223  145   72   90]
- [ 269   75   60   25   28]
- [ 137   54   76   58   56]
- [  65   32   51   62  110]
- [  85   22   50   69  150]]
+[[2019 223 145 72 90]
+[ 269 75 60 25 28]
+[ 137 54 76 58 56]
+[ 65 32 51 62 110]
+[ 85 22 50 69 150]]
 Score: 58.34
-Classification Report:               precision    recall  f1-score   support
+Classification Report: precision recall f1-score support
 
          1.0       0.78      0.79      0.79      2549
          2.0       0.18      0.16      0.17       457
@@ -266,8 +279,10 @@ Classification Report:               precision    recall  f1-score   support
          5.0       0.35      0.40      0.37       376
 
     accuracy                           0.58      4083
-   macro avg       0.35      0.35      0.35      4083
-weighted avg       0.58      0.58      0.58      4083
+
+macro avg 0.35 0.35 0.35 4083
+weighted avg 0.58 0.58 0.58 4083
+
 ```
 
 In predicting ratings using NLP from text data of reviews, the Multinomial Naive Bayes algorithm achieved an accuracy of **58.34%**.
@@ -277,13 +292,15 @@ In predicting ratings using NLP from text data of reviews, the Multinomial Naive
 - Took almost 16 minutes to process on local machine.
 
 ```
+
 Confusion Matrix for Support Vector Machines:
-[[2520    6    9    1   13]
- [ 411    6   29    6    5]
- [ 171   12  105   56   37]
- [  65   10   66   84   95]
- [  84    0   23   42  227]]
+[[2520 6 9 1 13]
+[ 411 6 29 6 5]
+[ 171 12 105 56 37]
+[ 65 10 66 84 95]
+[ 84 0 23 42 227]]
 Score: 72.05
+
 ```
 
 In predicting ratings using NLP from text data of reviews, the Support Vector Machines (SVM) algorithm achieved an accuracy of **72.05%**.
@@ -359,3 +376,4 @@ MSE = 0.8724341660543717
 ![happiness](img/happiness.jpg)
 
 <img src="img/2020_tshirt.jpg" alt="drawing" style="width:500px;"/>
+```
