@@ -305,7 +305,7 @@ In predicting ratings using NLP from text data of reviews, the Support Vector Ma
 
 ![ronald](img/ronald_dance.gif)
 
-## Regress
+## Regression
 
 ### Random Forest Regressor
 
@@ -314,7 +314,7 @@ Average absolute error: 0.64 degrees.
 RMSE = 0.9340418438455377
 MSE = 0.8724341660543717
 
-### Rand
+### XGBoostRegressor
 
 ## Computational Speed
 
