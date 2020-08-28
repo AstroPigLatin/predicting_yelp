@@ -201,7 +201,7 @@ Name: stars_y, dtype: float64
 
 ## Classification
 
-### Random Forest
+### Random Forest Classifier
 
 ```
 
@@ -228,6 +228,31 @@ weighted avg 0.62 0.68 0.59 4083
 ```
 
 In predicting ratings using NLP from text data of reviews, the Random Forest algorithm achieved an accuracy of **68.11%**.
+
+### Feature Importances
+
+```
+1. feature 963 (0.016805)
+2. feature 894 (0.015739)
+3. feature 949 (0.014289)
+4. feature 2462 (0.013126)
+5. feature 420 (0.012239)
+6. feature 1466 (0.010481)
+7. feature 235 (0.009764)
+8. feature 806 (0.008044)
+9. feature 1739 (0.007458)
+10. feature 1335 (0.006742)
+11. feature 863 (0.006698)
+12. feature 1278 (0.006067)
+13. feature 1685 (0.005839)
+14. feature 1931 (0.005757)
+15. feature 1400 (0.005549)
+16. feature 109 (0.005339)
+17. feature 1531 (0.005322)
+18. feature 669 (0.004888)
+19. feature 889 (0.004689)
+20. feature 745 (0.004646)
+```
 
 ### Multinomial Naive Bayes
 
