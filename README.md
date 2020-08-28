@@ -102,15 +102,13 @@ Number of Total Reviews:  20414
 
 'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to for larges cool fun thing to do right\n\nthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait days or so because the card had been authorized but not charged twice \n\n days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
 
-```
-
+</p>
 
 ### Round 2
 
 <p>
 
-'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to  for  larges cool fun thing to do rightthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait  days or so because the card had been authorized but not charged twice  days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may  worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
-
+'i think most of us have certain expectations of any restaurant my experience with this location has poisoned me against all mcdonalds it started when my wife said she wanted a fruit smoothy we ordered our smoothies which came to for larges cool fun thing to do rightthe next day i saw my card had been double charged so i went back and asked the manager if she could make it right i said i didnt even need a cash refund it would have been fine to just take it off the order i was about to make she said she could not do that and that she had no way to look it up she gave me a phone number to their office in mentor i called the person in mentor who looked up my order she said i needed to wait days or so because the card had been authorized but not charged twice days later the charge came off but i expect when i go out for food my card will not be double authorized be that as it may worth of food would have fixed this i will never go back to mcdonalds because of how this was handled'
 
 ## Insights
 
