@@ -31,7 +31,7 @@ A critical component for fast food restaurant businesses is developing products 
 - What meal time (e.g, breakfast, lunch, dinner, brunch) is mentioned the most in reviews?
 - What menu items (e.g., French fries, McNuggets, Big Mac, Coke, wuarterpounder) are mentioned the most in reviews?
 
-# Objective
+# Objectives
 
 - Find patterns in reviews such as food, time, people, emotion, and geography
 - Utilize NLP and machine learning algorithms to predict ratings given a user review
