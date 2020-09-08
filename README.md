@@ -29,7 +29,7 @@ A critical component for fast food restaurant businesses is developing products 
 - What food words or menu items are most likely discussed in reviews?
 - Which states/provinces or cities have the highest number of reviews?
 - What meal time (e.g, breakfast, lunch, dinner, brunch) is mentioned the most in reviews?
-- What menu items (e.g., French fries, McNuggets, Big Mac, Coke, wuarterpounder) are mentioned the most in reviews?
+- What menu items (e.g., French fries, McNuggets, Big Mac, Coke, quarterpounder) are mentioned the most in reviews?
 
 # Objective
 
@@ -336,7 +336,9 @@ In predicting ratings using NLP from text data of reviews, the Support Vector Ma
 
 Metrics for Random Forest Trained on Expanded Data
 Average absolute error: 0.64 degrees.
+<br>
 RMSE = 0.9340418438455377
+<br>
 MSE = 0.8724341660543717
 
 ### XGBoostRegressor
