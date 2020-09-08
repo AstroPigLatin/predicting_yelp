@@ -335,6 +335,7 @@ In predicting ratings using NLP from text data of reviews, the Support Vector Ma
 ### Random Forest Regressor
 
 Metrics for Random Forest Trained on Expanded Data
+<br>
 Average absolute error: 0.64 degrees.
 <br>
 RMSE = 0.9340418438455377
